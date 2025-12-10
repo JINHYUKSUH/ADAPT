@@ -33,7 +33,5 @@ Out-of-distribution (OOD) detection is an essential task when we deploy the trai
 Please check out our pretrained weights here
 
 # Main Result
-<!--
 <img width="1052" height="542" alt="image" src="https://github.com/user-attachments/assets/5f7a569f-3508-4f71-981a-5c081e322bf7" />
 <img width="1052" height="465" alt="image" src="https://github.com/user-attachments/assets/0f78db64-aa73-48dc-8279-cafd62caeece" />
--->
