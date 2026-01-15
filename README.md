@@ -22,13 +22,6 @@ Out-of-distribution (OOD) detection is an essential task when we deploy the trai
   
   Textures: https://www.robots.ox.ac.uk/~vgg/data/dtd/download/dtd-r1.0.1.tar.gz
 
-  3. You can reproduce the experiment result by FALCON.py.
-
-    git clone https://github.com/abb155889/FALCON.git
-    cd ADAPT
-    # Edit dataset paths in run_experiments.sh before running
-    bash run_experiments.sh
-
 # Pretrained weights
 Please check out our pretrained weights here
 
