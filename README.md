@@ -12,6 +12,7 @@ Hard negative-aware multi-prototype contrastive learning for Out-of-distribution
 
 2. This experiment requires the data to be downloaded
 
+# Data
 SVHN: http://ufldl.stanford.edu/housenumbers/test_32x32.mat
 
 LSUN: [https://www.dropbox.com/s/fhtsw1m3qxlwj6h/LSUN.tar.gz](https://www.dropbox.com/s/moqh2wh8696c3yl/LSUN_resize.tar.gz)
@@ -22,6 +23,24 @@ Tiny-ImageNet: https://www.dropbox.com/s/kp3my3412u5k9rl/Imagenet_resize.tar.gz
   
 Textures: https://www.robots.ox.ac.uk/~vgg/data/dtd/download/dtd-r1.0.1.tar.gz
 
+
+The upper dataset directory structure is as follows:
+```text
+datasets
+└── CIFAR100
+    └── cifar-100-python
+└── SVHN
+    └── test_32x32
+└── iSUN
+    └── ...
+└── LSUN_resize
+    └── ...
+└── imagenet_resize
+    └── ...
+└── texture
+    └── ...
+
+# Setup
 
 # Main Result
 <img width="1138" height="587" alt="image" src="https://github.com/user-attachments/assets/ae5693ac-88f9-46a6-b96a-8b11bc0af371" />
