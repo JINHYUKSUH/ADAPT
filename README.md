@@ -39,7 +39,6 @@ datasets
     └── ...
 └── texture
     └── ...
-
 ```
 
 
@@ -50,7 +49,7 @@ datasets
 git clone https://github.com/JINHYUKSUH/ADAPT.git
 cd ADAPT
 conda create -n ADAPT python=3.9
-conda activate CoReVAD
+conda activate ADAPT
 pip install -r requirements.txt
 ```
 
