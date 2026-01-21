@@ -72,14 +72,13 @@ python train_adapt.py \
   --epochs 500 \
   --batch-size 512 \
   --save-path ADAPT.pt
-
 ```
 
-
+```bash
 The trained model is saved as:
 
 ADAPT.pt
-
+```
 
 ## 2. Feature Extraction & OOD Inference (`eval_ood.py`)
 
