@@ -74,9 +74,8 @@ python train_adapt.py \
   --save-path ADAPT.pt
 ```
 
-```bash
 The trained model is saved as:
-
+```bash
 ADAPT.pt
 ```
 
