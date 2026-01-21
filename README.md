@@ -54,12 +54,38 @@ conda activate CoReVAD
 pip install -r requirements.txt
 ```
 
-We first extract CLIP vision features from the dataset.
+## Pipeline Overview
+
+This repository provides a simple two-step pipeline for OOD detection:
+
+1. **Train an ADAPT model on in-distribution data**
+2. **Extract features and perform OOD inference in a single evaluation script**
+
+---
+
+## 1. Training (`train_adapt.py`)
 
 ```bash
-python extract_clip_features.py
+python train_adapt.py \
+  --in-dataset CIFAR-100 \
+  --backbone resnet34 \
+  --method ADAPT \
+  --epochs 500 \
+  --batch-size 512 \
+  --save-path ADAPT.pt
 
+The trained model is saved as:
 
-# Main Result
-<img width="1138" height="587" alt="image" src="https://github.com/user-attachments/assets/ae5693ac-88f9-46a6-b96a-8b11bc0af371" />
-<img width="1052" height="465" alt="image" src="https://github.com/user-attachments/assets/0f78db64-aa73-48dc-8279-cafd62caeece" />
+ADAPT.pt
+
+```
+
+## 2. Feature Extraction & OOD Inference (`eval_ood.py`)
+
+This script performs **feature extraction and OOD evaluation in a single run**.
+
+```bash
+python eval_ood.py --in_dataset CIFAR-100 --save_path ADAPT.pt
+
+```
+
