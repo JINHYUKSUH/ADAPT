@@ -257,6 +257,13 @@ class ADAPTResNet(nn.Module):
     def project(self, feat):
         return F.normalize(self.head(feat), dim=-1)
 
+    def intermediate_forward(self, x, normalize = True):
+        feat = self.encoder(x).squeeze()
+        if normalize: 
+            return F.normalize(feat, dim=1)
+        else: 
+            return feat
+
 
 class SupCEResNet(nn.Module):
     """encoder + classifier"""
