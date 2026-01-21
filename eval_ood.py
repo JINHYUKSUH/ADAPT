@@ -26,7 +26,7 @@ def process_args():
     parser.add_argument('--name', type=str, default = '')
     parser.add_argument('--id_loc', default="./datasets/", type=str, help='location of in-distribution dataset')
     parser.add_argument('--ood_loc', default="./datasets/", type=str, help='location of ood datasets')
-    parser.add_argument('--save_path', type=str, default='ADAPT_FIN.pt', help='trained model')
+    parser.add_argument('--save_path', type=str, default='ADAPT.pt', help='trained model')
     parser.add_argument('--method', default='adapt',
                         type=str, help='method used for training')
     parser.add_argument('--backbone', default='resnet34',
@@ -220,6 +220,7 @@ if __name__ == '__main__':
     main(args)
     
     
+
 
 
 
