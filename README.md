@@ -24,7 +24,7 @@ Tiny-ImageNet: https://www.dropbox.com/s/kp3my3412u5k9rl/Imagenet_resize.tar.gz
 Textures: https://www.robots.ox.ac.uk/~vgg/data/dtd/download/dtd-r1.0.1.tar.gz
 
 
-The upper dataset directory structure is as follows:
+The dataset should be located as follows:
 ```text
 datasets
 └── CIFAR100
@@ -40,10 +40,25 @@ datasets
 └── texture
     └── ...
 
-'''
+```
 
 
 # Setup
+## Clone the repo
+
+```bash
+git clone https://github.com/JINHYUKSUH/ADAPT.git
+cd ADAPT
+conda create -n ADAPT python=3.9
+conda activate CoReVAD
+pip install -r requirements.txt
+```
+
+We first extract CLIP vision features from the dataset.
+
+```bash
+python extract_clip_features.py
+
 
 # Main Result
 <img width="1138" height="587" alt="image" src="https://github.com/user-attachments/assets/ae5693ac-88f9-46a6-b96a-8b11bc0af371" />
