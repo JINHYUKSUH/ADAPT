@@ -357,7 +357,7 @@ def main():
 
     train_loader, num_classes = get_loader_in(args, split='train')
 
-    model, _ = set_model(args, num_classes, load_ckpt=False)
+    model = set_model(args, num_classes, load_ckpt=False)
     criterion = ADAPT(args, temp=args.temp, num_classes=num_classes, proto_m=args.proto_m, n_protos=num_classes*args.cache_size,  k=args.k, lambda_pcon=args.lambda_pcon)
     model.to(device)
     model.encoder.to(device)
@@ -417,5 +417,6 @@ if __name__ == "__main__":
     # check if the model is trained
     if os.path.exists(args.save_path) and not FORCE_RUN:
         exit()
+
 
     main()
